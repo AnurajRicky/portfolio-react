@@ -1,0 +1,23 @@
+{
+  "name": "v1",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "build": "yarn sass:build && react-scripts build",
+    "eject": "react-scripts eject",
+    "sass:watch": "sass --watch scss:src/css",
+    "sass:build": "sass --update scss:src/css --style compressed",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "description": "portfolio",
+  "main": "index.js",
+  "author": "anuraj",
+  "license": "MIT"
+}
