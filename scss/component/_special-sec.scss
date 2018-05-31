@@ -1,0 +1,27 @@
+.special-sec{
+    min-height: 100vh;
+    .section-heading{
+        h2{
+            font-size: 2em;
+            font-weight: 900;
+            color: $indigo;
+            position: relative;
+            display: inline-block;
+            &:after{
+                content:'';
+                position: absolute;
+                width: 80px;
+                height: 6px;
+                border-radius: 3px;
+                background: $gray-200;
+                top:100%;
+                right: 50%;
+                transform: translateX(50%);
+                margin-top: 1rem;
+            }
+            @include media-breakpoint-up(md) {
+                font-size: 3em;
+            }
+        }
+    }
+}

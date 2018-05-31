@@ -1,0 +1,117 @@
+.wellcome_sec{
+    height: auto;   
+    padding: 5em 3em 2em;
+    background: $indigo;
+    position: relative;
+    overflow: hidden;
+    &:after{
+        content:none;
+        @include media-breakpoint-up(lg) {
+        content:" ";
+        }
+        display: block;
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 18vh solid $white;
+        border-left: 100vw solid transparent;     
+    }
+     .welcome_head{
+            h2{                
+                font-size: 2em;
+                color:$light;
+                position: relative;
+                z-index: 2;
+                font-weight: 900;
+                display: inline-block;     
+                text-transform: uppercase;       
+                &:before,&:after{
+                    content: ' ';
+                    position: absolute;
+                    top: 50%;
+                    width: 50px;
+                    height: 6px;
+                    border-radius: 3px;
+                    background:$light;
+                    z-index: 1;  
+                    transform: translateY(-50%);                  
+                }
+                
+                &:before{                    
+                    right:100%;     
+                    margin-right: 10px;              
+                 }
+                 &:after{                    
+                    left: 100%; 
+                     margin-left: 10px;                       
+                 }
+                @include media-breakpoint-up(lg) {
+                    font-size: 4em;
+                    &:before,&:after{
+                        width: 100%;
+                    }
+                    &:after{                        
+                        content: none;
+                       
+                    }
+                }
+            }
+            h3{
+                position: absolute;
+                top: -55px;
+                // left: -50px;    
+                font-size: 10em;       
+                font-weight: 900;           
+                z-index: 0;
+                color:darken($indigo,3%);
+                white-space: nowrap;
+                transform: translateX(-50px);
+                
+            }
+            p{
+                position: relative;
+                z-index: 1;
+                font-size: 1.2rem;
+            }
+            .btn{
+                text-transform: uppercase;
+                font-weight: 600;
+                color: $white;
+                border-radius: 30px;
+                padding: 0.5rem 1rem;
+                &.btn-yellow{
+                    background: $yellow;
+                    &:hover{
+                        background: darken($yellow,10%);
+                    }
+                }
+                &.btn-pink{
+                    background: $pink;
+                    // color: $white;
+                    &:hover{
+                        background: darken($pink,10%);
+                    }
+                }
+            }
+            
+        }
+        .welcome_thumb{
+                width: 550px;
+                position: absolute;
+                bottom: 0;
+                right: 85px;
+                // z-index: 9;
+                display: none;
+                 @include media-breakpoint-up(lg) {   
+                     display: block;
+                 }
+        }
+   
+    @include media-breakpoint-up(lg) {    
+        padding-top: 0;
+        height: 100vh;          
+    }
+}
+  
